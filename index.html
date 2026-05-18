@@ -534,6 +534,22 @@
       .ctrl-btn{width:34px;height:34px}
       .ctrl-btn.pp{width:46px;height:46px}
       #settingsPanel{width:100vw}
+      #shareModal .modal-box {
+    width: 100%; /* يأخذ عرض الشاشة بالكامل */
+    max-width: 100%;
+    border-radius: 24px 24px 0 0; /* انحناء من الأعلى فقط ليناسب شكل الأسفل */
+    margin-bottom: 0; /* ملاصق للحافة السفلية */
+    padding-bottom: env(safe-area-inset-bottom, 24px); /* مسافة أمان لهواتف الآيفون الحديثة */
+    
+    /* إلغاء أي تحريك علوي وجعل الأنميشن يفتح من تحت لفوق */
+    transform: translateY(0) scale(1) !important; 
+    animation: slideUp 0.3s ease-out;
+  }
+}
+    @keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
     }
 
     /* ── ISOLATION PANEL ── */
