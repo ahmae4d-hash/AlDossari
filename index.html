@@ -512,6 +512,16 @@
     @media (prefers-reduced-motion:reduce) {
       *{animation-duration:.01ms!important;transition-duration:.01ms!important}
     }
+    /* تأثير خاص بالشاشات الصغيرة فقط (الهواتف) */
+@media (max-width: 640px) {
+  #shareModal .modal-box {
+    /* تحريك المودال بأكمله لأعلى قليلاً */
+    transform: translateY(-40px); 
+    
+    /* أو يمكنك استخدام المارجن الأسفل لدفعه لأعلى */
+    /* margin-bottom: 50px; */
+  }
+}
 
     /* ── TOOLBAR ── */
     .toolbar-btn{
